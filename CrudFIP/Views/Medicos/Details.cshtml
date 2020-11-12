@@ -1,0 +1,50 @@
+﻿@model CrudFIP.Models.Medico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoCRM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoCRM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoCRM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCRM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especialidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar este Registro", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar para listagem de médicos cadastrados", "Index")
+</p>

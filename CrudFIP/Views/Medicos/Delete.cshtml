@@ -1,0 +1,59 @@
+﻿@model CrudFIP.Models.Medico
+
+@{
+    ViewBag.Title = "Remoção de Registro";
+}
+
+<h2></h2>
+
+<h3>Esta ação não pode ser desfeita. Você tem certeza disso?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoCRM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoCRM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoCRM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCRM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especialidade)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Apagar o registro" class="btn btn-default" />
+    <br />
+    <br />
+    <br />
+    @Html.ActionLink("Voltar para listagem de médicos cadastrados", "Index")
+</div>
+    }
+</div>
